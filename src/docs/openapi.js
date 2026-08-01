@@ -1,6 +1,10 @@
 const swaggerJsdoc = require('swagger-jsdoc');
 const path = require('path');
 
+const routePattern = path
+  .join(__dirname, '..', 'routes', '*.js')
+  .replace(/\\/g, '/');
+
 const options = {
   definition: {
     openapi: '3.0.3',
@@ -11,7 +15,7 @@ const options = {
     },
     servers: [{ url: '/' }],
   },
-  apis: [path.join(__dirname, '..', 'routes', '*.js')],
+  apis: ['./src/routes/*.js'],
 };
 
 module.exports = swaggerJsdoc(options);
