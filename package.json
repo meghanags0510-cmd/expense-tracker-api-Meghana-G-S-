@@ -1,0 +1,21 @@
+{
+  "name": "expense-tracker-api",
+  "version": "1.0.0",
+  "description": "Smart Expense Tracker API - a REST API for managing personal expenses",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --runInBand"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}
